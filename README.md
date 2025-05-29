@@ -43,18 +43,18 @@ After download, place them into your_local_project_directory --> Advanced-damage
 your_local_project_directory -->
 Advanced-damage-classification---wall/
 ├── datasets/
-│   ├── damage_classification_forTrain/wall_damage/     # 3-class training images (ImageFolder)
+│   ├── damage_classification_forTrain/wall_damage/      # 3-class training images (ImageFolder)
 │   ├── crack/train/                                     # Multi-label crack image folders
 │   ├── crack/valid/
 │   └── test_data/wall/                                  # Unlabeled test images
 ├── best_damage_model.pth                                # Saved damage classification model
 ├── best_crack_model.pth                                 # Saved crack multi-label model
-├── train_damage_model.py
-├── train_crack_model.py
+├── p01_train_damage_model.py
+├── p02_train_crack_model.py
 ├── train_labels.csv                                     # Auto-generated from crack/train
 ├── valid_labels.csv                                     # Auto-generated from crack/valid
-├── inference.py
-├── submission.csv                                             # Final submission (ID, class, criteria)
+├── p03_inference.py
+├── submission.csv                                       # Final submission (ID, class, criteria)
 ├── environment.yml
 ├── environment_short.yml
 └── README.md
@@ -98,14 +98,14 @@ Advanced-damage-classification---wall/
 
 ### Damage Classification:
 ```bash
-python train_damage_model.py
+python p01_train_damage_model.py
 # Trains the 3-class ConvNeXt model
 # Outputs best_damage_model.pth, train_labels.csv, valid_labels.csv
 ```
 
 ### Crack Feature Detection + CSV Generator:
 ```bash
-python train_crack_model.py
+python p02_train_crack_model.py
 # Trains the 11-label ConvNeXt model using CSV dataset
 # Run the embedded `make_multilabel_csv()` to generate csv.
 # from multi-label folder names like: `2_Huge Spalling 4_Continuous Diagonal cracks`
@@ -118,7 +118,7 @@ python train_crack_model.py
 
 Generate submission CSV for test images:
 ```bash
-python inference.py
+python p03_inference.py
 ```
 Output:
 ```
