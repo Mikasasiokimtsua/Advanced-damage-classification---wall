@@ -36,7 +36,7 @@ Contents:
 - `best_damage_model.pth`
 - `best_crack_model.pth`
 
-After download, place them into <your local project directory> --> Advanced-damage-classification like this:
+After download, place them into your_local_project_directory --> Advanced-damage-classification like this:
 ## 📁 Directory Structure
 ```bash
 your_local_project_directory --> Advanced-damage-classification/
