@@ -10,8 +10,9 @@ This project implements a complete end-to-end pipeline for detecting wall surfac
 1. Clone the repository:
 ```bash
 git clone https://github.com/Mikasasiokimtsua/Advanced-damage-classification---wall.git
-cd Advanced-damage-classification  #  this will be <your local project directory> 
+cd Advanced-damage-classification---wall
 ```
+> **Note**: #  this will be <your local project directory>.
 
 2. Create Conda environment:
 ```bash
