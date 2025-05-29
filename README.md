@@ -13,8 +13,7 @@ To run this project, please download the following from our shared Google Drive:
 
 Contents:
 - `datasets/` folder (contains all the training/validation/testing data)
-- `best_damage_model.pth`
-- `best_crack_model.pth`
+- 
 
 After download, place them into <your local project directory> like this:
 ## 📁 Directory Structure
@@ -37,6 +36,8 @@ your_local_project_directory/
 ├── environment_short.yml
 └── README.md
 ```
+
+> **Note**: datasets/crack/train/、datasets/crack/valid/  Both of these folder images have been labelled using Roboflow.
 
 ---
 
