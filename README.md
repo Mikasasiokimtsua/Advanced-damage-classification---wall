@@ -6,7 +6,30 @@ This project implements a complete end-to-end pipeline for detecting wall surfac
 
 ---
 
-## 📁 Directory Structure
+## 🔗 Google Drive (required files)
+To run this project, please download the following from our shared Google Drive:
+
+🔗 **[Download Link (Google Drive)](https://drive.google.com/drive/u/0/folders/1kf4Wppz6pU7q30t0VLqGTjMaAz3A3gd9)**
+
+Contents:
+- `datasets/` folder (contains training/validation/testing data)
+- `best_damage_model.pth`
+- `best_crack_model.pth`
+
+After download, place them into <your local project directory> like this:
+```
+your_local_project_directory/
+├── datasets/
+├── best_damage_model.pth
+├── best_crack_model.pth
+├── train_damage_model.py
+├── train_crack_model.py
+├── inference.py
+├── environment.yml
+└── README.md
+```
+
+## 📁 Directory Structure (detail)
 
 ```bash
 .
