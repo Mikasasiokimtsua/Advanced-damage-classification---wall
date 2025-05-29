@@ -1,4 +1,4 @@
-name: damage_wall
+name: damage_wall_env
 channels:
   - pytorch
   - nvidia
