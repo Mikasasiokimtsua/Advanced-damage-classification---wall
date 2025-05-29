@@ -1,0 +1,37 @@
+.gitignore
+=========
+# Ignore dataset and large models
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+
+# model weights
+*.pth
+*.pt
+
+# dataset folders
+/datasets/
+
+# Jupyter and IPython
+.ipynb_checkpoints
+
+# Environment
+.env
+.venv
+env/
+venv/
+ENV/
+
+# MacOS
+.DS_Store
+
+# VSCode
+.vscode/
+
+# Logs and outputs
+*.log
+*.csv
+output/
+submission.csv
