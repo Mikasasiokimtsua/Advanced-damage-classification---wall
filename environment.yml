@@ -13,5 +13,6 @@ dependencies:
   - tqdm
   - numpy
   - pillow
+  - pandas
   - pip:
       - matplotlib
