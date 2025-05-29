@@ -13,7 +13,8 @@ To run this project, please download the following from our shared Google Drive:
 
 Contents:
 - `datasets/` folder (contains all the training/validation/testing data)
-- 
+- `best_damage_model.pth`
+- `best_crack_model.pth`
 
 After download, place them into <your local project directory> like this:
 ## 📁 Directory Structure
