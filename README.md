@@ -16,7 +16,7 @@ cd Advanced-damage-classification---wall
 
 2. Create Conda environment:
 ```bash
-conda env create -f environment.yml    # if fail, try: conda env create -f environment_short.yml
+conda env create -f environment.yml    # if fail, try: conda env create -f environment_short.yml or environment_detail.yml instead.
 conda activate damage_wall_env
 ```
 
