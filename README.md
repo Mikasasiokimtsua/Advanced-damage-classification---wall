@@ -39,20 +39,21 @@ Contents:
 After download, place them into your_local_project_directory --> Advanced-damage-classification like this:
 ## 📁 Directory Structure
 ```bash
-your_local_project_directory --> Advanced-damage-classification/
+your_local_project_directory -->
+Advanced-damage-classification/
 ├── datasets/
 │   ├── damage_classification_forTrain/wall_damage/     # 3-class training images (ImageFolder)
 │   ├── crack/train/                                     # Multi-label crack image folders
 │   ├── crack/valid/
 │   └── test_data/wall/                                  # Unlabeled test images
-├── train_labels.csv                                     # Auto-generated from crack/train
-├── valid_labels.csv                                     # Auto-generated from crack/valid
 ├── best_damage_model.pth                                # Saved damage classification model
 ├── best_crack_model.pth                                 # Saved crack multi-label model
-├── wall.csv                                             # Final submission (ID, class, criteria)
 ├── train_damage_model.py
 ├── train_crack_model.py
+├── train_labels.csv                                     # Auto-generated from crack/train
+├── valid_labels.csv                                     # Auto-generated from crack/valid
 ├── inference.py
+├── submission.csv                                             # Final submission (ID, class, criteria)
 ├── environment.yml
 ├── environment_short.yml
 └── README.md
