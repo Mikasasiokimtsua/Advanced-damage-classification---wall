@@ -1,4 +1,4 @@
-name: advanced_damage_env
+name: damage_wall_env
 channels:
   - defaults
   - conda-forge
