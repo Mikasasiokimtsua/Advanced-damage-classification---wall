@@ -17,7 +17,7 @@ cd Advanced-damage-classification---wall
 2. Create Conda environment:
 ```bash
 conda env create -f environment.yml    # if fail, try: conda env create -f environment_short.yml
-conda activate damage_crack_env
+conda activate damage_wall_env
 ```
 
 2. Create Conda environment (Second option):
@@ -37,11 +37,11 @@ Contents:
 - `best_damage_model.pth`
 - `best_crack_model.pth`
 
-After download, place them into your_local_project_directory --> Advanced-damage-classification like this:
+After download, place them into your_local_project_directory --> Advanced-damage-classification---wall like this:
 ## 📁 Directory Structure
 ```bash
 your_local_project_directory -->
-Advanced-damage-classification/
+Advanced-damage-classification---wall/
 ├── datasets/
 │   ├── damage_classification_forTrain/wall_damage/     # 3-class training images (ImageFolder)
 │   ├── crack/train/                                     # Multi-label crack image folders
