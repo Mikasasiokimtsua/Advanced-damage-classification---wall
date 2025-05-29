@@ -9,8 +9,8 @@ This project implements a complete end-to-end pipeline for detecting wall surfac
 ## 📦 Setup
 1. Clone the repository:
 ```bash
-git clone https://github.com/YOUR_USERNAME/damage-crack-classification.git
-cd damage-crack-classification #  this will be <your local project directory> 
+git clone https://github.com/Mikasasiokimtsua/Advanced-damage-classification---wall.git
+cd Advanced-damage-classification  #  this will be <your local project directory> 
 ```
 
 2. Create Conda environment:
