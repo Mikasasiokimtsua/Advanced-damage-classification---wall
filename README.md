@@ -12,7 +12,7 @@ This project implements a complete end-to-end pipeline for detecting wall surfac
 git clone https://github.com/Mikasasiokimtsua/Advanced-damage-classification---wall.git
 cd Advanced-damage-classification---wall
 ```
-> **Note**: #  this will be <your local project directory>.
+> **Note**: This will be your_local_project_directory
 
 2. Create Conda environment:
 ```bash
