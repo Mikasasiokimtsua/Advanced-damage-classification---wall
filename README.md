@@ -6,6 +6,26 @@ This project implements a complete end-to-end pipeline for detecting wall surfac
 
 ---
 
+## 📦 Setup
+1. Clone the repository:
+```bash
+git clone https://github.com/YOUR_USERNAME/damage-crack-classification.git
+cd damage-crack-classification #  this will be <your local project directory> 
+```
+
+2. Create Conda environment:
+```bash
+conda env create -f environment.yml    # if fail, try: conda env create -f environment_short.yml
+conda activate damage_crack_env
+```
+
+2. Create Conda environment (Second option):
+```bash
+pip install torch torchvision pandas tqdm pillow
+```
+
+---
+
 ## 🔗 Google Drive (required files)
 To run this project, please download the following from our shared Google Drive:
 
@@ -69,25 +89,6 @@ your_local_project_directory/
   10: Small cracks
   ```
 
----
-
-## 📦 Setup
-1. Clone the repository:
-```bash
-git clone https://github.com/YOUR_USERNAME/damage-crack-classification.git
-cd damage-crack-classification
-```
-
-2. Create Conda environment:
-```bash
-conda env create -f environment.yml    # if fail, try: conda env create -f environment_short.yml
-conda activate damage_crack_env
-```
-
-2. Create Conda environment (Second option):
-```bash
-pip install torch torchvision pandas tqdm pillow
-```
 
 ---
 
