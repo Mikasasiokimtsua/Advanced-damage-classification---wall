@@ -36,10 +36,10 @@ Contents:
 - `best_damage_model.pth`
 - `best_crack_model.pth`
 
-After download, place them into <your local project directory> like this:
+After download, place them into <your local project directory> --> Advanced-damage-classification like this:
 ## 📁 Directory Structure
 ```bash
-your_local_project_directory/
+your_local_project_directory --> Advanced-damage-classification/
 ├── datasets/
 │   ├── damage_classification_forTrain/wall_damage/     # 3-class training images (ImageFolder)
 │   ├── crack/train/                                     # Multi-label crack image folders
