@@ -12,27 +12,14 @@ To run this project, please download the following from our shared Google Drive:
 🔗 **[Download Link (Google Drive)](https://drive.google.com/drive/u/0/folders/1kf4Wppz6pU7q30t0VLqGTjMaAz3A3gd9)**
 
 Contents:
-- `datasets/` folder (contains training/validation/testing data)
+- `datasets/` folder (contains all the training/validation/testing data)
 - `best_damage_model.pth`
 - `best_crack_model.pth`
 
 After download, place them into <your local project directory> like this:
-```
-your_local_project_directory/
-├── datasets/
-├── best_damage_model.pth
-├── best_crack_model.pth
-├── train_damage_model.py
-├── train_crack_model.py
-├── inference.py
-├── environment.yml
-└── README.md
-```
-
-## 📁 Directory Structure (detail)
-
+## 📁 Directory Structure
 ```bash
-.
+your_local_project_directory/
 ├── datasets/
 │   ├── damage_classification_forTrain/wall_damage/     # 3-class training images (ImageFolder)
 │   ├── crack/train/                                     # Multi-label crack image folders
@@ -42,7 +29,13 @@ your_local_project_directory/
 ├── valid_labels.csv                                     # Auto-generated from crack/valid
 ├── best_damage_model.pth                                # Saved damage classification model
 ├── best_crack_model.pth                                 # Saved crack multi-label model
-└── wall.csv                                             # Final submission (ID, class, criteria)
+├── wall.csv                                             # Final submission (ID, class, criteria)
+├── train_damage_model.py
+├── train_crack_model.py
+├── inference.py
+├── environment.yml
+├── environment_short.yml
+└── README.md
 ```
 
 ---
@@ -76,14 +69,23 @@ your_local_project_directory/
 
 ---
 
-## 🛠 Preprocessing (CSV Generator)
-
-Run the embedded `make_multilabel_csv()` to generate:
+## 📦 Setup
+1. Clone the repository:
 ```bash
-train_labels.csv
-valid_labels.csv
+git clone https://github.com/YOUR_USERNAME/damage-crack-classification.git
+cd damage-crack-classification
 ```
-from multi-label folder names like: `2_Huge Spalling 4_Continuous Diagonal cracks`
+
+2. Create Conda environment:
+```bash
+conda env create -f environment.yml    # if fail, try: conda env create -f environment_short.yml
+conda activate damage_crack_env
+```
+
+2. Create Conda environment (Second option):
+```bash
+pip install torch torchvision pandas tqdm pillow
+```
 
 ---
 
@@ -93,13 +95,15 @@ from multi-label folder names like: `2_Huge Spalling 4_Continuous Diagonal crack
 ```bash
 python train_damage_model.py
 # Trains the 3-class ConvNeXt model
-# Outputs best_damage_model.pth
+# Outputs best_damage_model.pth, train_labels.csv, valid_labels.csv
 ```
 
-### Crack Feature Detection:
+### Crack Feature Detection + CSV Generator:
 ```bash
 python train_crack_model.py
 # Trains the 11-label ConvNeXt model using CSV dataset
+# Run the embedded `make_multilabel_csv()` to generate csv.
+# from multi-label folder names like: `2_Huge Spalling 4_Continuous Diagonal cracks`
 # Outputs best_crack_model.pth
 ```
 
@@ -107,6 +111,16 @@ python train_crack_model.py
 
 ## 🔍 Inference Pipeline
 
+Generate submission CSV for test images:
+```bash
+python inference.py
+```
+Output:
+```
+submission.csv
+```
+
+detail description:
 1. Load both `best_damage_model.pth` and `best_crack_model.pth`
 2. For each image in `datasets/test_data/wall`:
    - Predict damage class → map to class ID: 18, 19, or 20
@@ -116,22 +130,17 @@ python train_crack_model.py
      - Class C → [1, 5, 7, 9, 10]
    - Run sigmoid on crack model outputs
    - Use threshold 0.5 or fallback to max-probability allowed criterion
-3. Save predictions to `wall.csv`:
-```csv
-ID,class
-0001,18,0,2
-0002,20,1,5,9
-```
+3. Save predictions to `submission.csv`
 
+## 📑 Submission Format
+```
+ID	class
+1	20,10
+2	18,2
+...
+```
 ---
 
-## 📦 Requirements
-
-```bash
-pip install torch torchvision pandas tqdm pillow
-```
-
----
 
 
 ## 📬 Contact
