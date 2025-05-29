@@ -1,4 +1,4 @@
-name: damage-mapping-env
+name: damage_wall_env
 channels:
   - defaults
   - pytorch
